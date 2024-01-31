@@ -1,0 +1,13 @@
+.header{
+    padding: 30px;
+    background-color: #d49726;
+    text-align: center;
+    color: #ffffff;
+}
+.header__text{
+    cursor: pointer;
+    color: #ffffff;
+}
+.link{
+    text-decoration: none;
+}
