@@ -19,7 +19,7 @@ function OneMeal() {
   return (
     <div className='container'>
       {random.map((el) => (
-        <div className="meal-container" key={el.idMeal}>
+        <div className="container-meal" key={el.idMeal}>
           <div className="meal-description">
             <div className="meal-blog">
                 
@@ -42,6 +42,7 @@ function OneMeal() {
             </div>
           </div>
           <div className="instructions">
+            <p className='inst-p'>Instruction</p>
             <p className='text'>{el.strInstructions}</p>
           </div>
           <div className="meal-btn">
