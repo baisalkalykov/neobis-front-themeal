@@ -40,7 +40,9 @@ function SearchMeal() {
       </div>
       {results.map((el) => (
           <div key={el.idMeal} className='search-meal-box'>
+            <Link to={`mealItem/${el.idMeal}`}>
              <img src={el.strMealThumb} alt={el.strMeal} className='search-img' />
+             </Link>
              <div className="search-text">
              <h2 className='search-meal-h2'>{el.strMeal}</h2>
              <p className='search-meal-p'>{el.strCategory} | <span>{el.strArea}</span></p>

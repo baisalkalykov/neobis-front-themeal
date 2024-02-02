@@ -28,13 +28,13 @@ function OneMeal() {
               <h2 className='name'>{el.strMeal}</h2>
               <p className="country">{el.strCategory} | <span>{el.strArea}</span></p>
               <ul className='meal-ul'>
-                <li className='meal-li'>- {el.strIngredient1}</li>
+                <li className='meal-li'>- {el.strIngredient1} <span>{el.strMeasure1}</span> </li>
                 <li className='meal-li'>- {el.strIngredient2} <span>{el.strMeasure2}</span></li>
-                <li className='meal-li'>- {el.strIngredient3}</li>
-                <li className='meal-li'>- {el.strIngredient4}</li>
-                <li className='meal-li'>- {el.strIngredient5}</li>
-                <li className='meal-li'>- {el.strIngredient6}</li>
-                <li className='meal-li'>- {el.strIngredient7}</li> 
+                <li className='meal-li'>- {el.strIngredient3} <span>{el.strMeasure3}</span></li>
+                <li className='meal-li'>- {el.strIngredient4} <span>{el.strMeasure4}</span></li>
+                <li className='meal-li'>- {el.strIngredient5} <span>{el.strMeasure5}</span></li>
+                <li className='meal-li'>- {el.strIngredient6}  <span>{el.strMeasure6}</span></li>
+                <li className='meal-li'>- {el.strIngredient7} <span>{el.strMeasure7}</span></li> 
               </ul>
             </div>
             <div className="meal-images">
