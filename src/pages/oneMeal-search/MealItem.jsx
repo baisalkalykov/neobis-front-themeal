@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import '../oneMeal/OneMeal.css'
+import './OneMeal.css' 
 
 function MealItem() {
   const { id } = useParams();
@@ -19,43 +19,36 @@ function MealItem() {
   }, [id]);
 
   return (
-    <div className='container'>
-    {random.map((el) => (
-      <div className="container-meal" key={el.idMeal}>
-        <div className="meal-description">
-          <div className="meal-blog">
-              
-          </div>
-          <div className="meal-title">
-            <h2 className='name'>{el.strMeal}</h2>
-            <p className="country">{el.strCategory} | <span>{el.strArea}</span></p>
-            <ul className='meal-ul'>
-              <li className='meal-li'>- {el.strIngredient1} <span>{el.strMeasure1}</span> </li>
-              <li className='meal-li'>- {el.strIngredient2} <span>{el.strMeasure2}</span></li>
-              <li className='meal-li'>- {el.strIngredient3} <span>{el.strMeasure3}</span></li>
-              <li className='meal-li'>- {el.strIngredient4} <span>{el.strMeasure4}</span></li>
-              <li className='meal-li'>- {el.strIngredient5} <span>{el.strMeasure5}</span></li>
-              <li className='meal-li'>- {el.strIngredient6}  <span>{el.strMeasure6}</span></li>
-              <li className='meal-li'>- {el.strIngredient7} <span>{el.strMeasure7}</span></li> 
-            </ul>
-          </div>
-          <div className="meal-images">
-            <img src={el.strMealThumb} alt={el.strMeal} className="img-meal" />
-          </div>
+    <div className='container-meal' key={random.idMeal}>
+      <div className="meal-description">
+        <div className="meal-title">
+          <h2 className='name'>{random.strMeal}</h2>
+          <p className="country">{random.strCategory} | <span>{random.strArea}</span></p>
+          <ul className='meal-ul'>
+            <li className='meal-li'>- {random.strIngredient1} <span>{random.strMeasure1}</span> </li>
+            <li className='meal-li'>- {random.strIngredient2} <span>{random.strMeasure2}</span></li>
+            <li className='meal-li'>- {random.strIngredient3} <span>{random.strMeasure3}</span></li>
+            <li className='meal-li'>- {random.strIngredient4} <span>{random.strMeasure4}</span></li>
+            <li className='meal-li'>- {random.strIngredient5} <span>{random.strMeasure5}</span></li>
+            <li className='meal-li'>- {random.strIngredient6}  <span>{random.strMeasure6}</span></li>
+            <li className='meal-li'>- {random.strIngredient7} <span>{random.strMeasure7}</span></li> 
+          </ul>
         </div>
-        <div className="instructions">
-          <p className='inst-p'>Instruction</p>
-          <p className='text'>{el.strInstructions}</p>
-        </div>
-        <div className="meal-btn">
-          <a href={el.strYoutube} className='btn'>
-              Watch on YouTube
-          </a>
+        <div className="meal-images">
+          <img src={random.strMealThumb} alt={random.strMeal} className="img-meal" />
         </div>
       </div>
-    ))}
-  </div>
-  );
+      <div className="instructions">
+        <p className='inst-p'>Instruction</p>
+        <p className='text'>{random.strInstructions}</p>
+      </div>
+      <div className="meal-btn">
+        <a href={random.strYoutube} className='btn'>
+          Watch on YouTube
+        </a>
+      </div>
+    </div>
+  ) 
 }
 
 export default MealItem;

@@ -23,7 +23,7 @@ function Home() {
     <div key={el.idMeal} className="meal-container">
       <div className="name-meals">
         <p className="meal-day">Meal of the Day</p>
-        <Link to={`oneMeal/${el.idMeal}`} className="link">
+        <Link to={`mealItem/${el.idMeal}`} className="link">
         <p className="meal-name">{el.strMeal}</p>
         </Link>
         <p className="meal-country">{el.strCategory} | <span>{el.strCategory}</span></p>
