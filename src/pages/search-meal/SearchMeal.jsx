@@ -23,7 +23,7 @@ function SearchMeal() {
         <div className="search-container">
         <div className="search">
             <h2 className='search-h2'>Find your Meal</h2>
-            <form className="search-box">
+            <div className="search-box">
                 <input type="text" placeholder='Find your meal'
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -31,7 +31,7 @@ function SearchMeal() {
                 <button 
                 onClick={handleSearch}
                 className='search-btn'>Search</button>
-            </form>
+            </div>
           
         </div>
         </div>
